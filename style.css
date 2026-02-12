@@ -1,0 +1,50 @@
+.grammar-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 320px;
+    background: white;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    font-family: Arial, sans-serif;
+    z-index: 999999;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.25s ease;
+}
+
+.grammar-popup.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.popup-header {
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #1a73e8;
+    font-size: 15px;
+}
+
+.suggestion-item {
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.error-text {
+    font-size: 12px;
+    margin-bottom: 6px;
+    color: #d93025;
+}
+
+.suggestion-btn {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    background: #1a73e8;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: b
