@@ -1,98 +1,121 @@
-# Grammar Checker Pro – Chrome Extension (Manifest V3)
+# 🧠 Grammar Checker Pro  
+### Chrome Extension (Manifest V3)
 
-Grammar Checker Pro is a Chrome Extension built using Manifest V3 that detects grammar and spelling mistakes in real time using the open-source LanguageTool API.
+A modern Chrome Extension that detects grammar and spelling mistakes in real time using the open-source LanguageTool API.
 
-The extension works on input fields, textareas, and contenteditable elements such as the Gmail compose box.
+Built with performance optimization, multi-error handling, and a clean floating UI.
 
-------------------------------------------------------------
+---
 
-FEATURES
+## 🚀 Overview
 
-- Real-time grammar and spelling detection
-- Supports multiple errors in a single sentence
-- One-click automatic correction
-- Works on Gmail, forms, blogs, and text editors
-- Debounced API calls for better performance
-- Cancels previous API requests to improve speed
-- Clean floating suggestion user interface
-- Built using Chrome Extension Manifest V3
+Grammar Checker Pro enhances writing directly inside the browser.  
+It monitors user input in:
 
-------------------------------------------------------------
+- Input fields  
+- Textareas  
+- Contenteditable elements (e.g., Gmail compose box)
 
-TECH STACK
+When the user pauses typing, the extension analyzes the text and displays smart correction suggestions in a modern floating panel.
+
+---
+
+## ✨ Key Features
+
+- ✅ Real-time grammar & spelling detection  
+- ✅ Multiple errors handled in a single sentence  
+- ✅ One-click automatic correction  
+- ✅ Automatic re-check after every fix  
+- ✅ Works on Gmail, blogs, forms, and text editors  
+- ✅ Debounced input handling for performance  
+- ✅ Cancels previous API requests to avoid lag  
+- ✅ Clean, animated floating UI  
+- ✅ Built using Chrome Extension Manifest V3  
+
+---
+
+## 🛠 Tech Stack
 
 - Chrome Extension (Manifest V3)
-- JavaScript (Content Script)
-- CSS (Custom UI Styling)
-- LanguageTool Open-Source API
+- JavaScript (Content Script Architecture)
+- CSS (Custom Floating UI Design)
+- LanguageTool Public API
 
-------------------------------------------------------------
+---
 
-HOW IT WORKS
+## ⚙️ How It Works
 
-1. The extension injects a content script into web pages.
-2. It listens for user input in input fields, textareas, and contenteditable elements.
-3. When the user pauses typing, the text is sent to the LanguageTool API.
-4. The API returns detected grammar and spelling mistakes.
-5. A floating suggestion panel appears with correction options.
-6. Clicking a suggestion replaces the incorrect word.
-7. The updated text is automatically re-checked until no errors remain.
+1. The extension injects a content script into all web pages.
+2. It listens for user input in supported fields.
+3. After a short pause (debounce), the text is sent to the LanguageTool API.
+4. The API returns detected grammar issues with suggested replacements.
+5. A floating suggestion panel appears.
+6. Clicking a suggestion replaces the incorrect text.
+7. The updated text is rechecked automatically until all errors are resolved.
 
-------------------------------------------------------------
+---
 
-PROJECT STRUCTURE
+## 📂 Project Structure
 
 grammar-checker-extension/
 │
-├── manifest.json
-├── content.js
-├── style.css
+├── manifest.json # Extension configuration (Manifest V3)
+├── content.js # Core logic & API integration
+├── style.css # Floating suggestion UI styling
 └── README.md
 
-------------------------------------------------------------
 
-EXAMPLE
+---
 
-Input:
-i has a apple.
+## 🧪 Example
 
-Detected errors:
-- i → I
-- has → have
-- a → an
+Input: i has a apple.
 
-The extension displays suggestions and updates the sentence step by step.
+Detected corrections:
 
-------------------------------------------------------------
+- i → I  
+- has → have  
+- a → an  
 
-INSTALLATION GUIDE
+Each correction can be applied individually, and the sentence is revalidated automatically.
+
+---
+
+## 🔧 Installation Guide
 
 1. Download or clone this repository.
 2. Open Google Chrome.
-3. Go to: chrome://extensions
-4. Enable Developer Mode (top right).
-5. Click "Load Unpacked".
+3. Navigate to: `chrome://extensions`
+4. Enable **Developer Mode** (top right corner).
+5. Click **Load Unpacked**.
 6. Select the project folder.
-7. The extension is now active.
+7. The extension is now active and ready to use.
 
-------------------------------------------------------------
+---
 
-API USED
+## 🌍 API Information
 
 This project uses the public LanguageTool API:
+
 https://api.languagetool.org
 
-No API keys or sensitive credentials are stored in this repository.
+No API keys or sensitive credentials are included in this repository.
 
-------------------------------------------------------------
+---
 
-DEMO
+## 📌 Future Enhancements
 
-(Add your demo video link here)
+- Inline word highlighting (Grammarly-style)
+- Tooltip suggestions near incorrect words
+- Dark mode UI
+- Extension toggle (ON/OFF switch)
+- Custom dictionary support
 
-------------------------------------------------------------
+---
 
-AUTHOR
+## 👨‍💻 Author
 
-Your Name  
-Chrome Extension Assignment Project
+Gaurav Prajapati  
+
+
+
