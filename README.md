@@ -1,75 +1,67 @@
-# Grammar Checker Pro – Chrome Extension
+# 🧠 Grammar Checker Pro – Chrome Extension (Manifest V3)
 
-## Overview
+A modern Chrome Extension that detects grammar and spelling mistakes in real time using the open-source LanguageTool API.
 
-Grammar Checker Pro is a Chrome Extension built using Manifest V3.
-It detects grammar and spelling mistakes in input fields, textareas,
-and contenteditable elements (such as Gmail compose box).
-
-The extension uses the open-source LanguageTool API to provide
-real-time grammar suggestions.
+Built using Chrome Extension Manifest V3 and optimized for performance and usability.
 
 ---
 
-## Features
+## 🚀 Overview
 
-- Detects grammar and spelling errors
-- Works on input fields, textareas, and Gmail
-- Supports multiple errors in a single sentence
-- One-click correction
-- Clean and modern floating UI
-- Debounced API calls for performance optimization
+Grammar Checker Pro is a lightweight Chrome extension that monitors user input in:
+
+- Input fields
+- Textareas
+- Contenteditable elements (e.g., Gmail compose box)
+
+When a user pauses typing, the extension sends the text to the LanguageTool API and displays grammar suggestions in a clean floating UI.
+
+The extension supports multiple errors in a single sentence and re-checks text automatically after each correction.
 
 ---
 
-## Tech Stack
+## ✨ Features
+
+- ✅ Real-time grammar & spelling detection
+- ✅ Supports multiple errors per sentence
+- ✅ One-click automatic correction
+- ✅ Works on Gmail, forms, blogs, and text editors
+- ✅ Debounced API calls for better performance
+- ✅ Request cancellation to prevent unnecessary API calls
+- ✅ Modern floating suggestion UI
+- ✅ Built using Manifest V3
+
+---
+
+## 🛠 Tech Stack
 
 - Chrome Extension (Manifest V3)
-- JavaScript (Content Scripts)
+- JavaScript (Content Script Architecture)
+- CSS (Custom Floating UI)
 - LanguageTool Open-Source Grammar API
-- CSS for UI styling
 
 ---
 
-## How It Works
+## 🧩 How It Works
 
-1. The extension injects a content script into web pages.
+1. The extension injects a content script into all web pages.
 2. It listens for user input in text fields.
-3. When the user pauses typing, the text is sent to the LanguageTool API.
-4. The API returns detected grammar mistakes.
-5. A floating suggestion popup appears.
-6. The user can click a suggestion to automatically correct the text.
-7. After correction, the text is re-checked for remaining errors.
+3. After a short pause (debounce), the text is sent to the LanguageTool API.
+4. The API returns grammar errors with correction suggestions.
+5. A floating suggestion panel appears.
+6. Clicking a suggestion replaces the incorrect word.
+7. The updated text is rechecked automatically until all errors are resolved.
 
 ---
 
-## How to Install
+## ⚡ Performance Optimizations
 
-1. Download or clone this repository.
-2. Open Google Chrome.
-3. Go to: chrome://extensions
-4. Enable "Developer Mode" (top right).
-5. Click "Load Unpacked".
-6. Select the project folder.
-7. The extension is now ready to use.
+- Debounced input handling (prevents excessive API calls)
+- AbortController used to cancel previous requests
+- Limited suggestion rendering (max 5 suggestions at a time)
+- Only checks text when meaningful content is present
 
 ---
 
-## API Usage
+## 📦 Project Structure
 
-This project uses the public LanguageTool API:
-https://api.languagetool.org
-
-No API keys or secrets are included in this repository.
-
----
-
-## Demo
-
-(Add your demo video link here)
-
----
-
-## Author
-
-Your Name
